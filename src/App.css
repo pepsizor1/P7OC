@@ -6,7 +6,7 @@ body {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  max-width: 1440px;
+  max-width: 1980px;
   margin: auto;
   position: relative;
   min-height: 100vh;
@@ -153,7 +153,7 @@ border-radius: 25px;
 .thumb-banner__overlay{
   position: absolute;
   top: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.3);
   height: 100%;
   width: 100%;
   border-radius: inherit;
@@ -257,7 +257,7 @@ border-radius: 25px;
 .footer {
  
   position: absolute;
-  margin-top: 50px;
+  margin-top: 100px;
   width: 100%;
   background: #000;
   height: 209px;
@@ -358,7 +358,7 @@ border-radius: 25px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 30px;
+  height: 40px;
   cursor: pointer;
   position: relative;
   z-index: 1;
@@ -509,12 +509,15 @@ border-radius: 25px;
   margin-top: 133px;
 }
 .about .Dropdown{
- 
+  
   margin-left: 109px;
   margin-right: 109px;
 }
+.about .Dropdown__button{
+  height: 47px;
+}
 .banner img{
-  
+  border-radius: 25px;
   height: 223px;
 }
 .about {
@@ -530,11 +533,16 @@ margin-bottom: 150px;
   margin-left: 20px;
   margin-right: 20px;
 }
+.about .Dropdown img {
+  margin-top: 20px;
+}
 .about p {
   font-size: 24px;
   margin-left: 10px;
-  
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
+
 
 
 

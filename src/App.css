@@ -257,7 +257,7 @@ border-radius: 25px;
 .footer {
  
   position: absolute;
-  
+  margin-top: 50px;
   width: 100%;
   background: #000;
   height: 209px;
@@ -509,15 +509,32 @@ border-radius: 25px;
   margin-top: 133px;
 }
 .about .Dropdown{
+ 
   margin-left: 109px;
   margin-right: 109px;
+}
+.banner img{
+  
+  height: 223px;
 }
 .about {
   object-fit: cover;
   margin-left: 50px;
   margin-right: 100px;
 }
-
+.about .banner {
+margin-bottom: 150px;
+}
+.about .Dropdown__text{
+  font-size: 24px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.about p {
+  font-size: 24px;
+  margin-left: 10px;
+  
+}
 
 
 

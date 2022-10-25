@@ -21,6 +21,8 @@ import PageNotFound from "./pages/PageNotFound";
 import StyledNavbar from "./components/StyledNavbar";
 import Footer from "./components/Footer";
 function App() {
+  
+  
   return (
     
         <Router>

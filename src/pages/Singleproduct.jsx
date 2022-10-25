@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import products from "../assets/data";
-
+import { Navigate } from "react-router-dom";
 import Rating from "../components/Rating";
 import Host from "../components/Host.jsx";
 import Slider from "../components/Slider";
@@ -8,11 +8,18 @@ import Tags from "../components/Tags";
 import Dropdown from "../components/Dropdown";
 
 const SingleProduct = () => {
+
   const { productId } = useParams();
+  
   const product = products.find((product) => product.id === productId);
+  if (product === undefined){
+    return <Navigate to="/404" />; 
+    }
   const { title, location, rating, host, equipments, description, pictures } =
     product;
-
+   
+  
+  
   return (
     <div className="singleproduct">
       <Slider slides={pictures} />

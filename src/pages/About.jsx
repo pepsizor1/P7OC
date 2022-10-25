@@ -1,7 +1,7 @@
 import Banner from "../components/Banner";
-import aboutData from "../assets/data.json";
-import Dropdown from "../components/Dropdown";
 
+import Dropdown from "../components/Dropdown";
+import imageBanner from "../assets/aboutbannerDesktop.png";
 
 const About = () => {
   
@@ -21,7 +21,7 @@ const About = () => {
 
   return (
     <div className="about">
-      
+      <Banner image={imageBanner} />
       <div className="about__dropdowns">
         <Dropdown title="fiabilité" content={content("fiability")} />
         <Dropdown title="respect" content={content("respect")} />

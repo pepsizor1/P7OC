@@ -29,7 +29,8 @@ function App() {
             <Route index element={<Home />} />
             <Route path="about"  element={<About />} />
             <Route path="products/:productId" element={<Singleproduct />} />
-            <Route path="*"  />
+            
+            <Route path="*" element={<PageNotFound />} />
           </Routes>
           <Footer />
         </Router>

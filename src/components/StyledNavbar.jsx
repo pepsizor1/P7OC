@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 
-//Style
+
 import Logo from "../assets/logo.svg";
 
 const StyledNavbar = () => {
@@ -10,10 +10,10 @@ const StyledNavbar = () => {
         <img src={Logo} alt="Logo" className="navbar__img" />
       </NavLink>
       <div className="navbar__links">
-        <NavLink
-          to="/"
+        <NavLink 
+          to="/" end={true}
           className={({ isActive }) =>
-            isActive ? "navbar__links--active" : "navbar__links--inactive"
+          isActive ? "navbar__links--active" : "navbar__links--inactive"
           }
         >
           Accueil
@@ -30,6 +30,8 @@ const StyledNavbar = () => {
     </nav>
   );
 };
+           
+       
         
 export default StyledNavbar;     
     

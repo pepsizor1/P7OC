@@ -1,6 +1,6 @@
 import React from "react";
 
-// style
+
 import redstar from "../assets/redStar.svg";
 import greystar from "../assets/greyStar.svg";
 
@@ -9,7 +9,7 @@ const Rating = ({ rating }) => {
 
   return (
     <div className="rating">
-      {/* Loop to display star by rating */}
+      
       {stars.map((star) =>
         rating >= star ? (
           <img

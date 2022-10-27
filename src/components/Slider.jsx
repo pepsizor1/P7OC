@@ -44,11 +44,12 @@ const Slider = ({ slides }) => {
           <div className="slider__next" onClick={nextSlide}>
             <img src={arrowRight} alt="" className="slider__next-icon" />
           </div>
-        </>
-      ) : null}
-    <div className="numerotation">
+          <div className="numerotation">
       {current + 1}/{length}
       </div>
+        </>
+      ) : null}
+    
     </div>
   );
 };

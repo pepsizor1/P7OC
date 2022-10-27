@@ -1,43 +1,48 @@
 import React from "react";
-import Vector from "../assets/Vector.png";
+import { useState } from "react";
 
+import Vector from "../assets/arrow_up.png";
 
-const Dropdown = ({ title, content }) => {
-  const isDropdown = (e) => {
-    e.preventDefault();
-    const divText = e.target.nextSibling;
-    const arrow = e.target.lastChild;
+function Dropdown({ title, content }) {
+  const [open, setOpen] = useState(false);
 
-    if (!divText.classList.contains("show")) {
-      divText.classList.add("show");
-      arrow.classList.add("rotate");
-    } else {
-      divText.classList.remove("show");
-      arrow.classList.remove("rotate");
-    }
-  };
   return (
     <div className="Dropdown ">
-      <button type="button" className="Dropdown__button" onClick={isDropdown}>
-        
+      <button
+        type="button"
+        className="Dropdown__button"
+        onClick={() => setOpen(!open)}
+      >
         <p className="title">{title}</p>
-        <img src={Vector} alt="" className="Dropdown__arrow" />
-      </button>
-      <div className="Dropdown__content">
-        {Array.isArray(content) ? (
-          <ul className="Dropdown__list">
-            {content.map((equipment, index) => (
-              <li key={index} className="Dropdown__list-element">
-                {equipment}
-              </li>
-            ))}
-          </ul>
+
+        {open ? (
+          <img src={Vector} alt="" className="Dropdown__arrow" />
         ) : (
-          <p className="Dropdown__text">{content}</p>
+          <img src={Vector} alt="" className={"Dropdown__arrow" + " " + "rotate"} />
         )}
-      </div>
+
+        
+      </button>
+
+      {open ? (
+        <div className={"Dropdown__content" + " " + "show"}>
+          {Array.isArray(content) ? (
+            <ul className="Dropdown__list">
+              {content.map((equipment, index) => (
+                <li key={index} className="Dropdown__list-element">
+                  {equipment}
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p className="Dropdown__text">{content}</p>
+          )}
+        </div>
+      ) : (
+        <div className={"Dropdown__content"}></div>
+      )}
     </div>
   );
-};
+}
 
 export default Dropdown;

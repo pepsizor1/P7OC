@@ -46,6 +46,9 @@ const Slider = ({ slides }) => {
           </div>
         </>
       ) : null}
+    <div className="numerotation">
+      {current + 1}/{length}
+      </div>
     </div>
   );
 };

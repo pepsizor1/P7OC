@@ -6,20 +6,21 @@ import Host from "../components/Host.jsx";
 import Slider from "../components/Slider";
 import Tags from "../components/Tags";
 import Dropdown from "../components/Dropdown";
+import { useEffect } from "react";
 
 const SingleProduct = () => {
-
+  useEffect(() =>{
+    window.scrollTo(0,0)
+  })
   const { productId } = useParams();
-  
   const product = products.find((product) => product.id === productId);
+  
   if (product === undefined){
-    return <Navigate to="/404" />; 
-    }
-  const { title, location, rating, host, equipments, description, pictures } =
-    product;
-   
+  return <Navigate to="/404" />; 
+  }
   
-  
+  const { title, location, rating, host, equipments, description, pictures } = product;
+    
   return (
     <div className="singleproduct">
       <Slider slides={pictures} />

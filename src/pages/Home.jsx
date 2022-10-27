@@ -8,7 +8,7 @@ import Thumbnails from "../components/Thumbnails";
 
 const slogan = "Chez vous, partout et ailleurs"
 
-const Products = () => {
+const Home = () => {
   return (
     <div className="home">
       <div className="home__banner">
@@ -28,4 +28,4 @@ const Products = () => {
     </div>
   );
 };
-export default Products;
+export default Home;

@@ -5,8 +5,6 @@ import imageBanner from "../assets/aboutbannerDesktop.png";
 
 const About = () => {
   
- 
-
   return (
     <div className="about">
       <Banner image={imageBanner} />

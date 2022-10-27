@@ -497,7 +497,22 @@ border-radius: 25px;
   transform: scale(1.05);
   transition: transform 300ms;
 }
-
+.numerotation{
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+  position: absolute;
+  left: 48.95%;
+  right: 49.11%;
+  top: 86.19%;
+  bottom: 6.01%;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 142.6%;
+  color: #ffffff;
+}
 .slider__previous, .slider__next {
   position: absolute;
   top: 0;
